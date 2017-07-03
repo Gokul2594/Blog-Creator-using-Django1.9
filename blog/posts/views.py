@@ -6,13 +6,9 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse, HttpResponseRedirect,Http404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 try:
-	from urllib.parse import quote_plus
-except:
-	pass
-try:
-	from urllib.parse import quote_plus
-except:
-	pass
+    from urllib import quote_plus  # Python 2.X
+except ImportError:
+    from urllib.parse import quote_plus  # Python 3+
 
 from .models import Post
 from .forms import PostForm

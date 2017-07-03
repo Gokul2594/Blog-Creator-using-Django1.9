@@ -1,5 +1,10 @@
-h1 {
-	color: #777777;
+body {
+    background-image: url('http://www.dragondc.com/wp-content/themes/dragondc/images/background_1.jpg');
+/*
+    #'http://www.no-zaku.com/background/wp-content/uploads/sites/9/2016/11/Fancy-Download-Background-Images-For-Website.jpg'
+*/
+    background-color: #ffffff;
+    color: #ffffff;   
 }
 
 .wmd-panel{
@@ -9,4 +14,8 @@ h1 {
 
 .comment-reply{
 	display:none;
+}
+
+a{
+	color:white;
 }

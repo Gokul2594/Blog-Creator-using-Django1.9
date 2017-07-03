@@ -9,13 +9,19 @@
 
 
 {% block post_detail_link %}
- <!-- <li><a href='{{ instance.get_absolute_url }}'>{{ instance.title }}</a></li> -->
 {% if request.user.is_authenticated %}
 {% if instance.user == request.user %}
-  <li><a href='{{ instance.get_absolute_url }}edit'>Edit</a></li>
-  <li><a href='{{ instance.get_absolute_url }}delete'>Delete</a></li>
+  <li class="active"><a href='{{ instance.get_absolute_url }}edit'><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Edit</a></li>
+  <li class="active"><a href='{{ instance.get_absolute_url }}delete'><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i> Delete</a></li>
 {% endif %}
 {% endif %}
+<div class="row">
+	<br/>
+	<br/>
+	<br/>
+	<hr/>
+	<li class="active"><a href='{{ instance.get_absolute_url }}'>Post : {{ instance.title }}</a></li><hr/>
+</div>
 
   <!-- <li><a href='{{ instance.get_absolute_url }}edit'>Edit</a></li> -->
   {% endblock %}

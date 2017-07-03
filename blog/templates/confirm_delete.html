@@ -6,6 +6,7 @@
 {% block head_title %}{{ instance.title }} | {{ block.super }} {% endblock head_title %}
 
 {% block content %}
+<div class="alert alert-info" role="alert">
 	<div class="col-sm-6 col-sm-offset-3">
 	<h1>Confirm Delete</h1>
   		<form method="POST" action=".">
@@ -15,4 +16,5 @@
 			<a href="{{ object.get_absolute_url }}" class="btn btn-default">Cancel</a>
 		</form>
 	</div>
+</div>
 {% endblock content %}
